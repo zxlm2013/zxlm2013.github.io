@@ -1,0 +1,328 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>ubuntu 笔记 | Water</title><meta name="author" content="Da Bai"><meta name="copyright" content="Da Bai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="ubuntu中的操作备忘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu 笔记">
+<meta property="og:url" content="https://zxlm2013.github.io/post/a1042c07.html">
+<meta property="og:site_name" content="Water">
+<meta property="og:description" content="ubuntu中的操作备忘">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zxlm2013.github.io/photos/ubuntu_logo.jpg">
+<meta property="article:published_time" content="2023-04-08T12:19:15.000Z">
+<meta property="article:modified_time" content="2023-04-09T03:26:11.930Z">
+<meta property="article:author" content="Da Bai">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="vim">
+<meta property="article:tag" content="VMware">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zxlm2013.github.io/photos/ubuntu_logo.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zxlm2013.github.io/post/a1042c07.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"3DCES81F7P","apiKey":"bece64b10be800516362a5e05953731c","indexName":"water-butterfly-blog","hits":{"per_page":10,"labels":null,"input_placeholder":"Search for Posts","hits_empty":"我们没有找到任何搜索结果: ${query}","hits_stats":"找到${hits}条结果（用时${time} ms）"},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Da Bai","link":"链接: ","source":"来源: Water","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ubuntu 笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-04-09 11:26:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/photos/avatar-bw.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-fw fas fa-compass"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/post/9ba41aa1.html"><i class="fa-fw fa-solid fa-table"></i><span> EXCEL</span></a></li><li><a class="site-page child" href="/post/a1042c07.html"><i class="fa-fw fa-brands fa-ubuntu"></i><span> ubuntu</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Water"><span class="site-name">Water</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-fw fas fa-compass"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/post/9ba41aa1.html"><i class="fa-fw fa-solid fa-table"></i><span> EXCEL</span></a></li><li><a class="site-page child" href="/post/a1042c07.html"><i class="fa-fw fa-brands fa-ubuntu"></i><span> ubuntu</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">ubuntu 笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-08T12:19:15.000Z" title="发表于 2023-04-08 20:19:15">2023-04-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-09T03:26:11.930Z" title="更新于 2023-04-09 11:26:11">2023-04-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Notes%E7%AC%94%E8%AE%B0/">Notes笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ubuntu 笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><div class="note info no-icon flat"><p>本篇文章是在ubuntu20.04环境下进行的。</p>
+</div>
+
+<h2 id="1-操作系统装完后要做的事"><a href="#1-操作系统装完后要做的事" class="headerlink" title="1. 操作系统装完后要做的事"></a>1. 操作系统装完后要做的事</h2><h3 id="1-1-配置-sources-list"><a href="#1-1-配置-sources-list" class="headerlink" title="1.1 配置 sources.list"></a>1.1 配置 sources.list</h3><p>Ubuntu 软件仓库镜像使用帮助<br><a target="_blank" rel="noopener" href="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/">https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/</a></p>
+<p>Ubuntu 的软件源配置文件是 <code>/etc/apt/sources.list</code></p>
+<div class="note info no-icon flat"><p>可以通过 <code>sudo gedit /etc/apt/sources.list</code>命令可视化配置</p>
+</div>
+
+<h3 id="1-2-更新"><a href="#1-2-更新" class="headerlink" title="1.2 更新"></a>1.2 更新</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Xshell等-远程-ubuntu-配置"><a href="#2-Xshell等-远程-ubuntu-配置" class="headerlink" title="2. (Xshell等)远程 ubuntu 配置"></a>2. (Xshell等)远程 ubuntu 配置</h2><p>xshell 远程连ubuntu 22端口未打开<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/gengzhy/article/details/128315096">https://blog.csdn.net/gengzhy/article/details/128315096</a></p>
+<h2 id="3-Vmware连Ubuntu"><a href="#3-Vmware连Ubuntu" class="headerlink" title="3. Vmware连Ubuntu"></a>3. Vmware连Ubuntu</h2><p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yakamoz423/article/details/128817915">https://blog.csdn.net/yakamoz423/article/details/128817915</a></p>
+<p>在VMware中安装新版Ubuntu后，无法跨虚拟机复制粘贴和拖拽文件的解决方法<br>先安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install open-vm-tools</span><br><span class="line">sudo apt install open-vm-tools-desktop</span><br></pre></td></tr></table></figure>
+
+<p>然后发现还是不能复制粘贴和拖拽文件？原因是Ubuntu（22.04，20.04等）默认启用了新版的窗口系统Wayland而非原来的X11。<br>而VMware Tools尚未支持这个特性（见<a target="_blank" rel="noopener" href="https://github.com/vmware/open-vm-tools/issues/592%EF%BC%89%E3%80%82">https://github.com/vmware/open-vm-tools/issues/592）。</a><br>所以我们需要禁用Wayland（见<a target="_blank" rel="noopener" href="https://linuxconfig.org/how-to-enable-disable-wayland-on-ubuntu-22-04-desktop%EF%BC%89%EF%BC%9A">https://linuxconfig.org/how-to-enable-disable-wayland-on-ubuntu-22-04-desktop）：</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/gdm3/custom.conf</span><br></pre></td></tr></table></figure>
+
+<p>删掉WaylandEnable&#x3D;false这一行最开始的#号以解开注释，然后保存文件。<br><img src="/photos/disable-wayland.png"><br>接着重启虚拟机系统即可，或者：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart gdm3</span><br></pre></td></tr></table></figure>
+
+<p>然后在虚拟机和主机之间的文件复制粘贴和拖拽就可以用了！</p>
+<h2 id="4-创建Python虚拟环境"><a href="#4-创建Python虚拟环境" class="headerlink" title="4. 创建Python虚拟环境"></a>4. 创建Python虚拟环境</h2><p>方案一：virtualenv+virtualenvwrapper<br>方案二：venv<br>方案三：Anaconda<br>方案四：pipenv<br>日常学习可以方案一，开发项目可以方案二，机器学习直接方案三，有少许对环境的强迫症直接方案四。</p>
+<h2 id="5-ubuntu命令行查找"><a href="#5-ubuntu命令行查找" class="headerlink" title="5. ubuntu命令行查找"></a>5. ubuntu命令行查找</h2><p>Ubuntu软件安装位置，一般都在&#x2F;usr&#x2F;bin下，个别可能会安装到&#x2F;usr&#x2F;share和&#x2F;usr&#x2F;local里</p>
+<h3 id="5-1-按安装路径查找"><a href="#5-1-按安装路径查找" class="headerlink" title="5.1 按安装路径查找"></a>5.1 按安装路径查找</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">通过软件名查看所有文件路径</span></span><br><span class="line">whereis google-chrome</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果显示</span></span><br><span class="line">google-chrome: /usr/bin/google-chrome /usr/share/man/man1/google-chrome.1</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">直接找的整个硬盘</span></span><br><span class="line">find / -name filename</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash">locate filename</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-按运行路径查找"><a href="#5-2-按运行路径查找" class="headerlink" title="5.2 按运行路径查找"></a>5.2 按运行路径查找</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">which google-chrom</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果显示</span></span><br><span class="line">/usr/bin/google-chrome</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-vim-常用指令"><a href="#6-vim-常用指令" class="headerlink" title="6. vim 常用指令"></a>6. vim 常用指令</h2><p>打开 <code>vim</code> 之后默认是 <code>Normal</code> 模式。</p>
+<ul>
+<li>按下 <code>i</code> 键，进入<code>Insert</code> 模式，你就可以输入文本了，就像用“记事本”一样。</li>
+<li>按 <code>esc</code> 退出 <code>insert</code> 模式，进入 <code>normal</code> 模式。</li>
+<li><code>:wq</code> → 存盘 + 退出 ( <code>:w</code> 存盘<code>:q</code> 退出) </li>
+<li><code>:q!</code> 不存盘退出</li>
+<li><code>dd</code> → 删除当前行，并把删除的行存到剪贴板里</li>
+<li><code>p</code>  → 粘贴剪贴板</li>
+<li><code>hjkl</code> → 效果等同于←↓↑→，用于移动光标</li>
+</ul>
+<h2 id="7-Terminal-中的常用操作"><a href="#7-Terminal-中的常用操作" class="headerlink" title="7. Terminal 中的常用操作"></a>7. Terminal 中的常用操作</h2><ul>
+<li>mv (重命名&#x2F;移动)</li>
+</ul>
+<p>例1：将&#x2F;usr&#x2F;xu中的所有文件移到当前目录（用“.”表示）中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mv</span> /usr/xu/ * .</span></span><br></pre></td></tr></table></figure>
+
+<p>例2：将文件wch.txt重命名为wjz.doc</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mv</span> wch.txt wjz.doc</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>cp (拷贝)</li>
+</ul>
+<div class="note info no-icon flat"><ul>
+<li>i 在覆盖目标文件之前将给出提示要求用户确认。回答y时目标文件将被覆盖，是交互式拷贝。</li>
+<li>r 若给出的源文件是一目录文件，此时cp将递归复制该目录下所有的子目录和文件。此时目标文件必须为一个目录名。</li>
+</ul>
+</div>
+
+<p>该命令将文件exam1.c拷贝到&#x2F;usr&#x2F;wang 这个目录下，并改名为 shiyan1.c。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cp</span> - i exam1.c /usr/wang/shiyan1.c</span></span><br></pre></td></tr></table></figure>
+
+<p>若不希望重新命名，可以使用下面的命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cp</span> exam1.c /usr/ wang/</span></span><br></pre></td></tr></table></figure>
+<p>将&#x2F;usr&#x2F;xu目录中的所有文件及其子目录拷贝到目录&#x2F;usr&#x2F;liu中</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cp</span> - r /usr/xu/ /usr/liu/</span> </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>rm (删除)</li>
+</ul>
+<div class="note info no-icon flat"><ul>
+<li>f 忽略不存在的文件，从不给出提示。</li>
+<li>r 指示rm将参数中列出的全部目录和子目录均递归地删除。</li>
+</ul>
+</div>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf 文件/目录名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>压缩和解缩</li>
+</ul>
+<div class="tabs" id="压缩和解压"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#压缩和解压-1">压缩</button></li><li class="tab"><button type="button" data-href="#压缩和解压-2">解压</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="压缩和解压-1"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf folder.tar folder</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="压缩和解压-2"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf folder.tar [-f 路径]</span><br></pre></td></tr></table></figure>
+<div class="note danger no-icon flat"><p>解压到当前文件夹不需要-f参数</p>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+<div class="note info no-icon flat"><p>-x：解压缩压缩文件。<br>-c：创建新的压缩文件。<br>-f：指定压缩文件的名称。<br>-v：显示过程的详细信息。</p>
+</div>
+
+<h2 id="附1：ubuntu主要目录的作用"><a href="#附1：ubuntu主要目录的作用" class="headerlink" title="附1：ubuntu主要目录的作用"></a>附1：ubuntu主要目录的作用</h2><p>Linux 的软件安装目录是也是有讲究的，理解这一点，在对系统管理是有益的<br>就统一安装在 <code>/usr/local</code></p>
+<p><code>/etc</code><br>Here’s where the administrative and system configuration stuff lives.<br>For instance, if you have samba installed, and you want to modify the samba configuration files, you’d find them in <code>/etc/samba</code> .<br>这里主要存放了系统配置方面的文件。<br>举个例子：你安装了samba这个套件，当你想要修改samba配置文件的时候，你会发现它们(配置文件)就在 <code>/etc/samba</code> 目录下。</p>
+<p><code>/home</code><br>Here’s where your data is stored.<br>Config files specific to users, your Desktop folder(whick makes your desktop what it is), and any data related to your user. Each user will have their own <code>/home/username folder</code> , with the exception of the root user.<br>这里主要存放你的个人数据。具体每个用户的设置文件，用户的桌面文件夹，还有用户的数据都放在这里。每个用户都有自己的用户目录，位置为： <code>/home/用户名</code> 。当然，root用户除外。</p>
+<p><code>/opt</code><br>Here’s where optional stuff is put.<br>Trying out the latest Firefox beta? Install it to <code>/opt</code> where you can delete it without affecting other settings. Programs in here usually live inside a single folder whick contains all of their data, libraries, etc.<br>这里主要存放那些可选的程序。你想尝试最新的firefox测试版吗?那就装到 <code>/opt</code> 目录下吧，这样，当你尝试完，想删掉firefox的时候，你就可 以直接删除它，而不影响系统其他任何设置。安装到 <code>/opt</code> 目录下的程序，它所有的数据、库文件等等都是放在同个目录下面。<br>举个例子：刚才装的测试版firefox，就可以装到 <code>/opt/firefox_beta</code> 目录下， <code>/opt/firefox_beta</code> 目录下面就包含了运 行firefox所需要的所有文件、库、数据等等。要删除firefox的时候，你只需删除 <code>/opt/firefox_beta</code> 目录即可，非常简单。<br>用户级的程序目录，可以理解为 <code>D:/Software</code> ，opt有可选的意思，这里可以用于放置第三方大型软件（或游戏），当你不需要时，直接<code>rm -rf</code> 掉即可。在硬盘容量不够时，也可将 <code>/opt</code> 单独挂载到其他磁盘上使用。</p>
+<p><code>/usr</code><br>Here’s where you’ll find extra utilities that don’t fit under <code>/bin</code> or <code>/etc</code>.<br>Things like games, printer utilities, and whatnot.<br><code>/usr</code> is divided into sections like <code>/usr/bin</code> for programs, <code>/usr/share</code> for shared data like sound files or icons,<br><code>/usr/lib</code> for libraries whick cannot be directly run but are essential for running other programs.Your package manager takes care of the things in <code>/usr</code> for you.<br>在这个目录下，你可以找到那些不适合放在 <code>/bin</code> 或 <code>/etc</code> 目录下的额外的工具。<br>比如像游戏阿，一些打印工具拉等等。<br><code>/usr</code> 目录包含了许多子目录： <code>/usr/bin</code> 目录用于存放程序; <code>/usr/share</code> 用于存放一些共享的数据，比如音乐文件或者图标等等;<br><code>/usr/lib</code> 目录用于存放那些不能直接 运行的，但却是许多程序运行所必需的一些函数库文件。你的软件包管理器(应该是“新立得”吧)会自动帮你管理好 <code>/usr</code> 目录的。<br>系统级的目录，可以理解为 <code>C:/Windows/</code> ， <code>/usr/lib</code> 理解为 <code>C:/Windows/System32</code> 。</p>
+<p><code>/usr/local</code><br>This is where most manually installed(ie. outside of your package manager) software goes. It has the same structure as <code>/usr</code> . It is a good idea to leave <code>/usr</code> to your package manager and put any custom scripts and things into <code>/usr/local</code> , since nothing important normally lives in <code>/usr/local</code> .<br>这里主要存放那些手动安装的软件，即不是通过“新立得”或apt-get安装的软件。它和 <code>/usr</code> 目录具有相类似的目录结构。让软件包管理器来管理<code>/usr</code> 目录，而把自定义的脚本(scripts)放到 <code>/usr/local</code> 目录下面，我想这应该是个不错的主意。<br>用户级目录，可以理解为 <code>C:/Progrem Files/</code> 。用户自己编译的软件默认会安装到这个目录下。一般是通过源码包安装的软件，如果没有特别指定安装目录的话，一般是安装在这个目录中。</p>
+<h2 id="附2-Ubuntu-Release-文件已经过期sudo-apt-get-update报错，该仓库的更新将不会应用"><a href="#附2-Ubuntu-Release-文件已经过期sudo-apt-get-update报错，该仓库的更新将不会应用" class="headerlink" title="附2 Ubuntu Release 文件已经过期sudo apt-get update报错，该仓库的更新将不会应用"></a>附2 Ubuntu Release 文件已经过期sudo apt-get update报错，该仓库的更新将不会应用</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35379989/article/details/107643290">https://blog.csdn.net/qq_35379989/article/details/107643290</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://zxlm2013.github.io">Da Bai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zxlm2013.github.io/post/a1042c07.html">https://zxlm2013.github.io/post/a1042c07.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zxlm2013.github.io" target="_blank">Water</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ubuntu/">ubuntu</a><a class="post-meta__tags" href="/tags/vim/">vim</a><a class="post-meta__tags" href="/tags/VMware/">VMware</a></div><div class="post_share"><div class="social-share" data-image="/photos/ubuntu_logo.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/photos/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/photos/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/photos/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/photos/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/post/ba51dd9.html" title="基于hexo-theme-butterfly搭建个人博客"><img class="cover" src="/photos/hexo_logo.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">基于hexo-theme-butterfly搭建个人博客</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/ba51dd9.html" title="基于hexo-theme-butterfly搭建个人博客"><img class="cover" src="/photos/hexo_logo.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-08</div><div class="title">基于hexo-theme-butterfly搭建个人博客</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/photos/avatar-bw.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Da Bai</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zxlm2013"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zxlm2013" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1027983475@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%A3%85%E5%AE%8C%E5%90%8E%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B"><span class="toc-text">1. 操作系统装完后要做的事</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%85%8D%E7%BD%AE-sources-list"><span class="toc-text">1.1 配置 sources.list</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%9B%B4%E6%96%B0"><span class="toc-text">1.2 更新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Xshell%E7%AD%89-%E8%BF%9C%E7%A8%8B-ubuntu-%E9%85%8D%E7%BD%AE"><span class="toc-text">2. (Xshell等)远程 ubuntu 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Vmware%E8%BF%9EUbuntu"><span class="toc-text">3. Vmware连Ubuntu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%9B%E5%BB%BAPython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="toc-text">4. 创建Python虚拟环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-ubuntu%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E6%89%BE"><span class="toc-text">5. ubuntu命令行查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%8C%89%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84%E6%9F%A5%E6%89%BE"><span class="toc-text">5.1 按安装路径查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E6%8C%89%E8%BF%90%E8%A1%8C%E8%B7%AF%E5%BE%84%E6%9F%A5%E6%89%BE"><span class="toc-text">5.2 按运行路径查找</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-vim-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-text">6. vim 常用指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Terminal-%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-text">7. Terminal 中的常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%841%EF%BC%9Aubuntu%E4%B8%BB%E8%A6%81%E7%9B%AE%E5%BD%95%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">附1：ubuntu主要目录的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%842-Ubuntu-Release-%E6%96%87%E4%BB%B6%E5%B7%B2%E7%BB%8F%E8%BF%87%E6%9C%9Fsudo-apt-get-update%E6%8A%A5%E9%94%99%EF%BC%8C%E8%AF%A5%E4%BB%93%E5%BA%93%E7%9A%84%E6%9B%B4%E6%96%B0%E5%B0%86%E4%B8%8D%E4%BC%9A%E5%BA%94%E7%94%A8"><span class="toc-text">附2 Ubuntu Release 文件已经过期sudo apt-get update报错，该仓库的更新将不会应用</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/a1042c07.html" title="ubuntu 笔记"><img src="/photos/ubuntu_logo.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ubuntu 笔记"/></a><div class="content"><a class="title" href="/post/a1042c07.html" title="ubuntu 笔记">ubuntu 笔记</a><time datetime="2023-04-08T12:19:15.000Z" title="发表于 2023-04-08 20:19:15">2023-04-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/ba51dd9.html" title="基于hexo-theme-butterfly搭建个人博客"><img src="/photos/hexo_logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于hexo-theme-butterfly搭建个人博客"/></a><div class="content"><a class="title" href="/post/ba51dd9.html" title="基于hexo-theme-butterfly搭建个人博客">基于hexo-theme-butterfly搭建个人博客</a><time datetime="2023-04-08T03:40:29.000Z" title="发表于 2023-04-08 11:40:29">2023-04-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/4a17b156.html" title="Hello World"><img src="/photos/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/post/4a17b156.html" title="Hello World">Hello World</a><time datetime="2023-04-08T03:05:59.644Z" title="发表于 2023-04-08 11:05:59">2023-04-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/3192a7f2.html" title="数据库操作备忘录"><img src="/photos/sql_logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据库操作备忘录"/></a><div class="content"><a class="title" href="/post/3192a7f2.html" title="数据库操作备忘录">数据库操作备忘录</a><time datetime="2023-03-23T05:30:24.000Z" title="发表于 2023-03-23 13:30:24">2023-03-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/27607873.html" title="爬虫学习记录1"><img src="/photos/spider_logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="爬虫学习记录1"/></a><div class="content"><a class="title" href="/post/27607873.html" title="爬虫学习记录1">爬虫学习记录1</a><time datetime="2023-03-07T07:08:59.000Z" title="发表于 2023-03-07 15:08:59">2023-03-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By Da Bai</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="8210247415" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></body></html>
